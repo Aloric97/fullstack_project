@@ -29,7 +29,7 @@ const createTable= async ()=>{
         console.log('table was created succesfully')
     )
     .catch(err=>{
-        console.log('There was error to create the tables: ${err}')
+        console.log(`There was error to create the tables: ${err}`)
     })
 }
 

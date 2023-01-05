@@ -8,6 +8,7 @@ const morgan = require('morgan')
 //importing routes from the routes carpet
 const indexRoutes = require('./routes/index')
 const testRoutes = require('./test/userRol')
+const registerLogin = require('./routes/aunthentication')
 
 const {connectDB} = require('./config/database')
 const createTable= require('./config/createTables')
@@ -28,6 +29,7 @@ app.use(morgan('common'))
 //calling imported routes
 app.use(indexRoutes)
 app.use(testRoutes)
+app.use(registerLogin)
 
 app.listen(PORT,() =>{
     console.log(`app listening on ${PORT}`)

@@ -38,13 +38,13 @@ const user = database.define('user',{
         type: DataTypes.STRING,
         allowNull:false,
         validate:{
-            len: [8,50]
+            len: [8,250]
         }
     }},{ timestamps: false }
 )
 
 //relationships 1 to 1, of user and rol
-user.hasOne(rol)
-rol.belongsTo(user)
+rol.hasMany(user)
+user.belongsTo(rol)
 
 module.exports=user

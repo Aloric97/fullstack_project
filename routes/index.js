@@ -1,6 +1,11 @@
 const routes=require('express').Router()
 
-routes.get('/', (req, res) => {
+//importing middlewares
+const isCommon= require('../middlewares/isCommon')
+const verifyToken=require('../middlewares/verifyToken')
+
+
+routes.get('/',verifyToken,isCommon,(req, res) => {
 
     res.send("welcome to the page index")
 })
