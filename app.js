@@ -4,6 +4,7 @@ const express= require('express')
 const dotenv= require('dotenv').config()
 const bodyParser= require('body-parser')
 const morgan = require('morgan')
+const cors =require('cors')
 
 //importing routes from the routes carpet
 const indexRoutes = require('./routes/index')
