@@ -24,9 +24,9 @@ const createRoles= async ()=>{
     
     if(!find) {
         const roles = await rol.bulkCreate([userCommon,userAdmin])
-        console.log('user created successfully')
+        console.log('roles created successfully')
     }else{
-        console.error('users have already been created before')
+        console.error('roles have already been created before')
     }
     
     
