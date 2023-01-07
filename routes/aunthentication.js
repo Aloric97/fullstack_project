@@ -17,7 +17,6 @@ routes.post('/register',async(req,res)=>{
     if (verifyEmail){
         res.status(400).json({error:'this email is already in use'})
     }
-
     const salt= bcrypt.genSaltSync(10)
     const encryptedPassword= bcrypt.hashSync(password,salt)
 
